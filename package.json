@@ -1,0 +1,29 @@
+{
+  "name": "whitechain-cossack-business",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "clean": "rimraf cache artifacts coverage",
+    "build": "tsc -p .",
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "coverage": "hardhat coverage",
+    "deploy:core:testnet": "hardhat run scripts/00_deploy-core.ts --network whitechainTestnet",
+    "deploy:game:testnet": "hardhat run scripts/01_deploy-game.ts --network whitechainTestnet"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@types/chai": "^4.3.11",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.11.30",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.8",
+    "rimraf": "^5.0.5",
+    "solidity-coverage": "^0.8.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2"
+  }
+}
